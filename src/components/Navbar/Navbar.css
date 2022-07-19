@@ -1,0 +1,48 @@
+.background {
+    background-color: #72D3AD;
+  }
+
+  .navbar-custom .nav-link {
+    font-size: 17px;
+    font-weight: 1, 400;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  .navbar-custom{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+
+
+.navbar-nav{
+  margin-right: 0 !important;
+}
+
+.nav-item{
+  margin:0;
+  padding:0;
+}
+
+.navbar-collapse{
+  flex-grow: 0;
+}
+
+
+.selected{
+    color: black !important;
+  }
+
+  .not_selected{
+    color: white !important
+  }
+
+  li a:hover {
+    color: black !important;
+    text-decoration: underline;
+  }
