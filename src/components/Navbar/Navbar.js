@@ -1,12 +1,12 @@
 import './Navbar.css'
-import img_logo from './img/logo.png';
-
+import CartWidget from '../CartWidget/CartWidget';
 
 const Navbar = () => {
     return (
+
         <nav className="navbar sticky-top navbar-expand-lg navbar-dark background">
         <div className="container-fluid">
-        <a href=" "><img src={img_logo} height="80px" alt="logo"/></a>
+        <a href=" "><img src='img/logo.png' height="80px" alt="logo"/></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
@@ -17,8 +17,10 @@ const Navbar = () => {
                 <li className="nav-item"><a className="nav-link not_selected" href=" ">Ferias</a></li>
                 <li className="nav-item"><a className="nav-link not_selected" href=" ">Suplementos</a></li>
             </ul>
+            <CartWidget/>
         </div>
         </div>
+
         </nav>
     )
 }
