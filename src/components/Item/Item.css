@@ -1,0 +1,48 @@
+.Product{
+    position: relative;
+    height: 350px;
+    width: 250px;
+    border: 2px solid #72D3AD;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    margin-bottom: 20px;
+
+}
+
+.Img{
+    object-fit: cover;
+    height: 350px;
+    width: 250px;
+    opacity: 1;
+}
+.Title{
+    position: absolute;
+    bottom: 70px;
+    left:10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4), rgba(68,68,68,0.9));
+    z-index: 10;
+
+}
+.Price{
+    position: absolute;
+    bottom: 45px;
+    left: 10px;
+    font-weight: 500;
+    z-index: 10;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4), rgba(68,68,68,0.9));
+    font-size: 18px;
+}
+
+.DescriptionButton{
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-weight: 500;
+    z-index: 10;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4), rgba(68,68,68,0.9));
+    font-size: 18px;
+
+}
