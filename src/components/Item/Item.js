@@ -6,7 +6,7 @@ const Item = ({product}) =>{
         <div className='Product'>
             <img alt="producto" className='Img' src={product.img}/>
             <span className='Title'>{product.title}</span>
-            <span className='Price'>{product.price}</span>
+            <span className='Price'>${product.price}</span>
             <button className='DescriptionButton'>Detalles</button>
         </div>
     )

@@ -8,11 +8,12 @@ const ItemDetail = ({product}) =>{
     return(
 
     <div className='DetailProduct'>
-        <img alt="producto" className='Img' src={product.img}/>
+        <img alt="producto" className='DetailImg' src={product.img}/>
         <span className='DetailTitle'>{product.title}</span>
-        <span className='DetailCategory'>{product.category}</span>
-        <span className='DetailPrice'>{product.price}</span>
-        <span className='DetailDescription'>{product.description}</span>
+        <span className='DetailCategory'>Categoría: {product.category}</span>
+        <span className='DetailPrice'>${product.price}</span>
+        <span className='DetailDescription'>Descripción: {product.description}</span>
+        <span className='DetailStock'>Stock Disponible: {product.stock}</span>
         <Counter stock={20} initial={1} onAdd={handleOnAdd}/>
     </div>
 

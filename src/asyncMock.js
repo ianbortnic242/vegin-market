@@ -5,6 +5,7 @@ const products = [
         description:'Proteina de soya, 300grs.',
         category: 'Proteinas',
         price: 1000,
+        stock: 3,
         img:'img/products/tofu.webp',
     },
 
@@ -14,6 +15,7 @@ const products = [
         description:'Proteina de garbanzos, 250 grs.',
         category: 'Proteinas',
         price: 2000,
+        stock: 4,
         img:'img/products/tempeh.webp',
     },
 

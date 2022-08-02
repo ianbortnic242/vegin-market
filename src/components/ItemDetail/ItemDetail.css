@@ -1,6 +1,6 @@
 .DetailProduct{
     position: relative;
-    height: 700px;
+    height:950px;
     overflow: hidden;
     color: white;
     margin-bottom: 20px;
@@ -11,8 +11,8 @@
 
 .DetailImg{
     object-fit: cover;
-    height: 350px;
-    width: 250px;
+    height: 525px;
+    width: 375px;
     opacity: 1;
 }
 .DetailTitle{
@@ -51,6 +51,16 @@
 .DetailDescription{
     position: absolute;
     bottom: 125px;
+    left: 10px;
+    font-weight: 500;
+    z-index: 10;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4), rgba(68,68,68,0.9));
+    font-size: 18px;
+}
+
+.DetailStock{
+    position: absolute;
+    bottom: 100px;
     left: 10px;
     font-weight: 500;
     z-index: 10;
