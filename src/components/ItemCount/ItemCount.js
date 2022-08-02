@@ -33,12 +33,12 @@ const Counter = ({stock, initial, onAdd}) => {
         <h1>{count}</h1>
         <div className='count_container'>
 
-            <buttton className='counter_button' onClick={decrement}>-</buttton>
-            <buttton className='counter_button' onClick={increment}>+</buttton>
+            <button className='counter_button' onClick={decrement}>-</button>
+            <button className='counter_button' onClick={increment}>+</button>
 
         </div>
         <div className='count_container'>
-            <buttton className='counter_button' onClick={()=> onAdd(count)}>Agregar al Carrito</buttton>
+            <button className='counter_button' onClick={()=> onAdd(count)}>Agregar al Carrito</button>
         </div>
 
 

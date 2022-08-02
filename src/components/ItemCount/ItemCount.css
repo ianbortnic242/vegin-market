@@ -17,8 +17,9 @@
 
 .counter_button{
     width: 100%;
-    border: 1px solid #72D3AD;
-    color: white;
+    border: 1px solid black;
+    color: black;
+    background-color: #72D3AD;
     font-size: medium;
     margin: 5px;
 }
