@@ -1,12 +1,11 @@
 import Item from '../Item/Item'
-import './ItemList.css'
 
 const ItemList = ({products}) =>{
     return(
         <div>
 
-            {products.map(item => (
-                <Item key={item.id} product={item}/>
+            {products.map(product => (
+                <Item {...product}/>
             ))}
 
         </div>
