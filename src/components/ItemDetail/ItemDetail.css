@@ -27,6 +27,18 @@
 }
 
 
+.GoToCart{
+    position: absolute;
+    bottom: 250px;
+    left: 10px;
+    font-weight: 500;
+    z-index: 10;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4), rgba(68,68,68,0.9));
+    font-size: 18px;
+}
+
+
+
 .DetailCategory{
     position: absolute;
     bottom: 175px;
