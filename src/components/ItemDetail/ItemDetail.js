@@ -16,8 +16,6 @@ const ItemDetail = ({id, title, description, category, price, stock, img}) =>{
         setQuantity(quantity)
         addItem({id, title, price, quantity})
         console.log(cart)
-
-
       }
     return(
 

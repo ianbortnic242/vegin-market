@@ -2,7 +2,9 @@ import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget';
 import {Link} from 'react-router-dom'
 
+
 const Navbar = () => {
+
     return (
 
         <nav className="navbar sticky-top navbar-expand-lg navbar-dark background">

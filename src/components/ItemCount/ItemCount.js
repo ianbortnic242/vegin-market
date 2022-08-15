@@ -8,6 +8,7 @@ const Counter = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(1)
 
 
+
     const decrement = () => {
         if(count > initial){
             setCount((prevCount) => prevCount - 1)
