@@ -28,6 +28,7 @@ export const CartContextProvider = ({children}) => {
             })
             setCart(cartUpdated)
         }
+        console.log(cart)
 
     }
 
@@ -40,7 +41,7 @@ export const CartContextProvider = ({children}) => {
         setCart([])
     }
 
-    const getQuantity = () => {
+    const getQuantity = (id) => {
         let accu = 0
         cart.forEach(prod => {
             accu += prod.quantity
@@ -49,10 +50,15 @@ export const CartContextProvider = ({children}) => {
         return accu
     }
 
-    console.log(cart)
+    const getInitialById = (id) => {
+
+        const product = cart.find(prod => prod.id === id)
+
+        return product?.quantity
+    }
 
     return (
-        <CartContext.Provider value={{cart, addItem, isInCart, removeItem, clearCart, getQuantity}}>
+        <CartContext.Provider value={{cart, addItem, isInCart, removeItem, clearCart, getQuantity, getInitialById}}>
             {children}
         </CartContext.Provider>
     )

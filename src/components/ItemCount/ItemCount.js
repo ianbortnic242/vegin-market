@@ -1,33 +1,29 @@
-import { useState } from 'react'
+import { useState} from 'react'
 import './ItemCount.css';
 
 
+const Counter = ({stock=0, initial=1, title, onAdd}) => {
 
-const Counter = ({stock, initial, onAdd}) => {
+    console.log(title)
+    console.log(initial)
 
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(initial)
 
-
+    console.log(count)
 
     const decrement = () => {
-        if(count > initial){
+
+        if(count > 1){
             setCount((prevCount) => prevCount - 1)
         }
-
-
-
     }
-
 
     const increment = () => {
 
         if(count < stock){
             setCount((prevCount) => prevCount + 1)
         }
-
     }
-
-
 
     return (
     <div className='container_father'>
