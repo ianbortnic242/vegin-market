@@ -37,6 +37,11 @@
     font-size: 18px;
 }
 
+.GoToCartButton{
+    color:#72D3AD;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4), rgba(68,68,68,0.9));
+}
+
 
 
 .DetailCategory{

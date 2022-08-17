@@ -44,5 +44,5 @@
     z-index: 10;
     background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4), rgba(68,68,68,0.9));
     font-size: 18px;
-
+    color: black;
 }

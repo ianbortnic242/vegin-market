@@ -1,0 +1,13 @@
+
+.Details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.ButtonEliminar{
+    align-self: flex-end;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.4), rgba(68,68,68,0.9));
+    font-size: 18px;
+}
