@@ -1,16 +1,22 @@
 import './Cart.css'
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect} from "react"
 import { CartContext } from '../../context/CartContext'
 import CartItem from '../CartItem/CartItem'
-import { addDoc, collection, Timestamp, updateDoc, doc } from 'firebase/firestore'
-import {db} from '../../services/firebase/index'
-// import { getProducts} from "../../asyncMock"
+import { Link } from 'react-router-dom'
 
 const Cart= () => {
     const { cart, clearCart, getTotal} = useContext(CartContext) 
-    // const [products, setProducts] = useState([]) 
+    const [disabled, setDisabled] = useState(false)
+    
 
     const total = getTotal()
+
+    useEffect(() => {
+        if(total===0){
+            setDisabled(true)
+        }
+      })
+
     
     // const fillProducts = () =>{
     //     getProducts().then(resp =>{
@@ -29,23 +35,6 @@ const Cart= () => {
     // })
 
 
-
-    const createOrder = () => {
-        const objOrder = {
-            buyer: {
-                name: 'Ian Bortnic',
-                phone: '964',
-                mail: 'ian@gmail.com'
-            },
-            items: cart,
-            total,
-            date: Timestamp.fromDate(new Date())
-        }
-        addDoc(collection(db, 'orders'), objOrder).then(response => {
-            console.log(response)
-        })
-    }
-
     return(
         <>
         <div>
@@ -55,7 +44,8 @@ const Cart= () => {
             { cart.map(p => <CartItem key={p.id} {...p}/>) }
             <h3 className='Total'>Total: ${total}</h3>
             <button onClick={() => clearCart()} className="ButtonEliminar">Borrar todo</button>
-            <button onClick={() => createOrder()} className="ButtonEliminar">Crear Orden</button>
+            <Link to='/checkout'><button disabled = {disabled} className="ButtonEliminar">Ir al Checkout</button></Link>
+            
             {/* <button onClick={() => fillProducts()} className="ButtonEliminar">Fill Products</button> */}
             </div>
 

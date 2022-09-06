@@ -3,6 +3,8 @@ import Counter from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import {Link} from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
+import swal from 'sweetalert';
+
 
 
 const ItemDetail = ({id, title, description, category, price, stock, img}) =>{
@@ -14,7 +16,7 @@ const ItemDetail = ({id, title, description, category, price, stock, img}) =>{
 
 
     const handleOnAdd = (quantity) => {
-        console.log(`${quantity} Items agregados satisfactoriamente`)
+        swal(`${quantity} Item(s) agregados satisfactoriamente`,'', "success")
         setQuantity(quantity)
         addItem({id, title, price, quantity})
       }

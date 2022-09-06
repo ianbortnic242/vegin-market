@@ -28,7 +28,6 @@ export const CartContextProvider = ({children}) => {
             })
             setCart(cartUpdated)
         }
-        console.log(cart)
 
     }
 

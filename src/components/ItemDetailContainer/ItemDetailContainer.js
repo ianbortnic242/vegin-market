@@ -17,7 +17,6 @@ const ItemDetailContainer = ({addItem}) =>{
 
   
       getDoc(doc(db, 'products', productId)).then(response => {
-        console.log(response)
         const product = {id: response.id, ...response.data()}
         setProduct(product)
       }).catch(err =>{

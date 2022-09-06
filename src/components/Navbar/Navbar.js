@@ -1,9 +1,35 @@
 import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget';
 import {Link} from 'react-router-dom'
+import {useState, useEffect} from "react"
+import {getDocs, collection} from "firebase/firestore";
+import {db} from '../../services/firebase/index'
 
 
 const Navbar = () => {
+
+
+    const [categories, setCategories] = useState([]);
+
+
+    useEffect(() => {
+    const collectionRef = collection(db, "categories");
+    getDocs(collectionRef).then((response) => {
+        const categories = []
+        response.docs.forEach((category) => {
+        categories.push(category.data().description);
+        })
+        return categories;
+
+    }).then((categories) =>{
+        setCategories(categories)}).catch(err =>{
+            console.log(err)
+          })
+
+    },[])
+
+
+
 
     return (
 
@@ -14,11 +40,9 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
             <ul className="navbar-nav navbar-custom">
-                <li className="nav-item"><a className="nav-link not_selected" href=" "><Link to='/category/Proteinas'>Proteinas</Link></a></li>
-                <li className="nav-item"><a className="nav-link not_selected" href=" "><Link to='/category/Cereales'>Cereales</Link></a></li>
-                <li className="nav-item"><a className="nav-link not_selected" href=" "><Link to='/category/Leches'>Leches</Link></a></li>
-                <li className="nav-item"><a className="nav-link not_selected" href=" "><Link to='/category/Golosinas'>Golosinas</Link></a></li>
+                {categories.map((category) => (<li className="nav-item"><a className="nav-link not_selected" href=" "><Link to={`/category/${category}`}>{category}</Link></a></li>))}
             </ul>
             <CartWidget/>
         </div>
