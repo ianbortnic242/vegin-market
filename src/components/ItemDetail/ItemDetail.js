@@ -10,7 +10,7 @@ import swal from 'sweetalert';
 const ItemDetail = ({id, title, description, category, price, stock, img}) =>{
 
     const [quantity, setQuantity] = useState(0)
-    const {cart, addItem, getInitialById} = useContext(CartContext)
+    const {addItem, getInitialById} = useContext(CartContext)
 
     const quantityAdded = getInitialById(id)
 

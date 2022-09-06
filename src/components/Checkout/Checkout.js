@@ -1,11 +1,8 @@
 import { useContext, useState } from "react"
 import { CartContext } from '../../context/CartContext'
-import CartItem from '../CartItem/CartItem'
-import { addDoc, collection, Timestamp, updateDoc, doc, query, where, getDocs, documentId, writeBatch} from 'firebase/firestore'
+import { addDoc, collection, Timestamp, query, where, getDocs, documentId, writeBatch} from 'firebase/firestore'
 import {db} from '../../services/firebase/index'
-import { clear } from '@testing-library/user-event/dist/clear'
 import swal from 'sweetalert';
-// import { getProducts} from "../../asyncMock"
 
 
 const Checkout = () => {
@@ -38,7 +35,6 @@ const Checkout = () => {
     
             const productsAddedFromFireStore = await getDocs(query(collection(db, 'products'), where(documentId(), 'in', ids)))
 
-    
             const {docs} = productsAddedFromFireStore
     
             const outOfStock = []
@@ -74,60 +70,49 @@ const Checkout = () => {
             console.log(error)
         }
         
-
     }
-
-
-
-
-
 
     return (
         <div>
-            <h1>
-                Checkout
-            </h1>
-            <h2>
-                Ingresa tus datos para poder ingresar la orden.
-            </h2><br/>
+            <h1>Checkout</h1>
+            <h2>Ingresa tus datos para poder ingresar la orden.</h2><br/>
             <form>
-    <input
-      value={firstName}
-      onChange={e => setFirstName(e.target.value)}
-      placeholder="Nombre"
-      type="text"
-      name="Nombre"
-      required
-    /><br/><br/>
-    <input
-      value={lastName}
-      onChange={e => setLastName(e.target.value)}
-      placeholder="Apellido"
-      type="text"
-      name="Apellido"
-      required
-    /><br/><br/>
-    <input
-      value={email}
-      onChange={e => setEmail(e.target.value)}
-      placeholder="Email"
-      type="email"
-      name="email"
-      required
-    /><br/><br/>
-    <input
-      value={phone}
-      onChange={e => setPhone(e.target.value)}
-      placeholder="Telefono"
-      type="phone"
-      name="phone"
-      required
-    /><br/><br/>
-  </form>
-        <button onClick={() => createOrder()}>Crear Orden</button>
+                <input
+                value={firstName}
+                onChange={e => setFirstName(e.target.value)}
+                placeholder="Nombre"
+                type="text"
+                name="Nombre"
+                required
+                /><br/><br/>
+                <input
+                value={lastName}
+                onChange={e => setLastName(e.target.value)}
+                placeholder="Apellido"
+                type="text"
+                name="Apellido"
+                required
+                /><br/><br/>
+                <input
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                placeholder="Email"
+                type="email"
+                name="email"
+                required
+                /><br/><br/>
+                <input
+                value={phone}
+                onChange={e => setPhone(e.target.value)}
+                placeholder="Telefono"
+                type="phone"
+                name="phone"
+                required
+                /><br/><br/>
+            </form>
+            <button onClick={() => createOrder()}>Crear Orden</button>
         </div>
     )
-
 }
 
 export default Checkout;

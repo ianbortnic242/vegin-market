@@ -17,24 +17,6 @@ const Cart= () => {
         }
       })
 
-    
-    // const fillProducts = () =>{
-    //     getProducts().then(resp =>{
-    //         setProducts(resp)
-    //         console.log(products)
-    //       })
-    //     products.forEach(element => {
-    //         addDoc(collection(db, 'products'), element).then(response => {
-    //             console.log(response)
-    //         })  
-    //     })
-    // }
-
-    // updateDoc(doc(db, 'products',   'tjEhpE8gUUp5FW5BbYOe'), {'stock': 19}).then(response =>{
-    //     console.log(response)
-    // })
-
-
     return(
         <>
         <div>
@@ -45,8 +27,6 @@ const Cart= () => {
             <h3 className='Total'>Total: ${total}</h3>
             <button onClick={() => clearCart()} className="ButtonEliminar">Borrar todo</button>
             <Link to='/checkout'><button disabled = {disabled} className="ButtonEliminar">Ir al Checkout</button></Link>
-            
-            {/* <button onClick={() => fillProducts()} className="ButtonEliminar">Fill Products</button> */}
             </div>
 
         </>

@@ -1,9 +1,7 @@
 import { useState, useEffect} from 'react'
 import './ItemCount.css';
 
-
-
-const Counter = ({stock=0, initial=0, title, onAdd}) => {
+const Counter = ({stock=0, initial=0, onAdd}) => {
 
     const [count, setCount] = useState(initial)
     const [disabled, setDisabled] = useState(false)
@@ -15,7 +13,6 @@ const Counter = ({stock=0, initial=0, title, onAdd}) => {
         }
     }
     
-
     const increment = () => {
 
         if(count < stock){
