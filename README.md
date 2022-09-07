@@ -27,3 +27,6 @@ La aplicación interactúa con firebase, una base de datos que almacena la infro
 ## Link Video Tutorial
 Haz click en vegin_market.gif para entender como usar la aplicación!
 
+## Link de la APP
+https://63181e5836cc9c4fe3f52a29--vegin-market.netlify.app/
+
