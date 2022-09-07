@@ -6,13 +6,13 @@ import { getFirestore} from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBU4dwy9hXP5ymPnoFk8e4QBXY0wMeF1fI",
-  authDomain: "vegin-market.firebaseapp.com",
-  projectId: "vegin-market",
-  storageBucket: "vegin-market.appspot.com",
-  messagingSenderId: "660593078057",
-  appId: "1:660593078057:web:957b42aaf9bc49291cd138"
-};
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
