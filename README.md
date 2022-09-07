@@ -22,8 +22,8 @@ Inicia el servidor en el navegador
 
 Este es un ecommerce de productos veganos en donde el cliante puede navegar entre distintas categorias de productos.  Al seleccionar ciertas categorias y ver el detalle de cada producto, el cliente puede elegir agregar distintas cantidades de los proudctos que le interese al carrito.  Posterior a eso, el cliente se dirige al resumen del carrito, para finalizar con el checkout, en donde completa sus datos y genera la orden.
 
-La aplicación interactúa con firestore, una base de datos que almacena la infromación y stock de los productos.  A medida que distintos clientes hacen pedidos, el stock de firestore y la cantidad que los siguientes clientes pueden pedir va variando.
+La aplicación interactúa con firebase, una base de datos que almacena la infromación y stock de los productos.  A medida que distintos clientes hacen pedidos, el stock reflejado en firebase y la cantidad que los siguientes clientes pueden pedir va variando.
 
 ## Link Video Tutorial
-[Video](https://imgur.com/a/ZEB0qhL)
+Haz click en vegin_market.gif para entender como usar la aplicación!
 
