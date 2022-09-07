@@ -18,27 +18,12 @@ Npm buscara las dependencias necesarias en el archivo package.json y las instala
 ### `npm start`
 Inicia el servidor en el navegador
 
-## Componentes
-Cree los siguientes componentes:
-- ItemListContainer: Es el componente encargado de consultar al asyncMock y mostrar la lista de productos, ya sean todos los productos o por categoria.
-- ItemList: Crea una lista desordenada
-- Item: Es un componente reutilizable, el cual muestra el producto.
+## Sobre el Proyecto
 
-- ItemDetailContainer: Contiene la logica necesaria para hacer el llamado a la "API" y solicitar un producto por Id. A su vez pasa este contenido a ItemDetail
-- ItemDetail: Es un componente reutilizable, el cual muestra el detalle de un producto.
+Este es un ecommerce de productos veganos en donde el cliante puede navegar entre distintas categorias de productos.  Al seleccionar ciertas categorias y ver el detalle de cada producto, el cliente puede elegir agregar distintas cantidades de los proudctos que le interese al carrito.  Posterior a eso, el cliente se dirige al resumen del carrito, para finalizar con el checkout, en donde completa sus datos y genera la orden.
 
-- NavBar: Como su nombre lo dice contiene la navegación del sitio web, además de tener el componente CartWidget
-- CartWidget: Componente que contiene la imagen del carrito de compras y un contador.
-
-- asyncMock: Con este archivo simulamos la llamada a una API. El tiempo de respuesta se modifica con timeout.
-
-## Navegación
-La navegación del sitio web se realizó con `react-router-dom` el cual facilita el trabajo y genera una mejor experiencia de usuario al cambiar la url y generar historial.
+La aplicación interactúa con firestore, una base de datos que almacena la infromación y stock de los productos.  A medida que distintos clientes hacen pedidos, el stock de firestore y la cantidad que los siguientes clientes pueden pedir va variando.
 
 ## Link Video Tutorial
-[Video](https://imgur.com/djxPgR4)
+[Video](https://imgur.com/a/ZEB0qhL)
 
-## Sobre el proyecto
-
-A lo largo del curso he ido realizando desafios, los cuales estan guardados en cada una de las ramas de este repo.
-La finalidad es hacer una web de un e-commerce. En este caso escogi un e-commerce de productos veganos.
