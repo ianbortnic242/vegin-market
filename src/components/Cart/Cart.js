@@ -5,17 +5,18 @@ import CartItem from '../CartItem/CartItem'
 import { Link } from 'react-router-dom'
 
 const Cart= () => {
-    const { cart, clearCart, getTotal} = useContext(CartContext) 
+    
     const [disabled, setDisabled] = useState(false)
+    const { cart, clearCart, getTotal} = useContext(CartContext) 
+    const total = getTotal()
     
 
-    const total = getTotal()
-
     useEffect(() => {
+
         if(total===0){
             setDisabled(true)
         }
-      })
+      },[total])
 
     return(
         <>
