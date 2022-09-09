@@ -24,7 +24,7 @@ const Counter = ({stock=0, initial=0, onAdd}) => {
         if(stock===0){
             setDisabled(true)
         }
-      })
+      },[stock])
 
 
 
