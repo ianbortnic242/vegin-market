@@ -1,0 +1,10 @@
+footer{
+    padding-right:20%;
+    padding-left:20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 0.5px grey;
+    border-style: solid;
+  }
