@@ -7,4 +7,8 @@ footer{
     justify-content: space-around;
     border-top: 0.5px grey;
     border-style: solid;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
   }

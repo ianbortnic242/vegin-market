@@ -1,5 +1,8 @@
 import './App.css';
 import Footer from './components/main/Footer/Footer'
+import Home from './components/main/Home/Home'
+
+
 // import Navbar from './components/Navbar/Navbar';
 // import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 // import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
@@ -17,6 +20,7 @@ function App() {
       <CartContextProvider>
       <header className="App-header">
       <BrowserRouter>
+      <Home/>
         {/* <Navbar/>
         <Routes>
           <Route path='/' element={<ItemListContainer greeting="¡Bienvenido a Vegin Market, el mejor mercado vegano!"/>}/>

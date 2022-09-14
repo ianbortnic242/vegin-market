@@ -1,0 +1,23 @@
+.main_div{
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+}
+
+.container_box{
+    height: 200px;
+    position: relative;
+}
+
+.box{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.stack-top{
+    z-index: 1;
+    margin-top: 300px;
+  }
