@@ -48,7 +48,6 @@ const Home = () => {
 
 
     return (
-
         <div className='container_box'>
             <div><img className="box" src = {home_img}/></div>
             <div className='box stack-top main_div'>
@@ -61,11 +60,11 @@ const Home = () => {
                             <div className="container-fluid overflow-scroll">
                                 <div className="row d-flex justify-content-around flex-nowrap">
                                     {section['categories'].map((category) => (
-                                        <div className="col-4 d-flex justify-content-around">
-                                            <div className="card card-block index_topics_size topics">
+                                        <div className="col-4 row d-flex justify-content-around">
+                                            <div className="card card-block index_topics_size topics no_padding">
                                                 <div><img className="fill_div transition" src={category.img}/></div>
-                                                <h1 className="centered_down">{category.name}</h1>
                                             </div>
+                                            <div><h1 className="centered_down category_title">{category.name}</h1></div>
                                         </div>
                                     ))}
                                 </div>
@@ -73,10 +72,8 @@ const Home = () => {
                         </div>
                     </section>
                 ))}
-
             </div>
         </div>
-
 )}
 
 export default Home
