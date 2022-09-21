@@ -94,3 +94,11 @@ p {
 .no_padding {
     padding: 0 !important;
 }
+
+/* .margin_section {
+    margin-bottom: 80px;
+} */
+
+.spacing_footer{
+    height: 120px;
+}

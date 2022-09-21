@@ -54,13 +54,13 @@ const Home = () => {
                 <p>Escoge un tema para comenzar!</p>
 
                 {sections.map((section) => (
-                    <section className="section">
+                    <section className="section ian">
                         <h2 style={{'color': section['color']}}>{section['name']}</h2>
                         <div>
                             <div className="container-fluid overflow-scroll">
                                 <div className="row d-flex justify-content-around flex-nowrap">
                                     {section['categories'].map((category) => (
-                                        <div className="col-4 row d-flex justify-content-around">
+                                        <div className="col-4 row d-flex justify-content-around margin_section">
                                             <div className="card card-block index_topics_size topics no_padding">
                                                 <div><img alt='' className="fill_div transition" src={category.img}/></div>
                                             </div>
@@ -72,6 +72,7 @@ const Home = () => {
                         </div>
                     </section>
                 ))}
+                <div className='spacing_footer'></div>
             </div>
         </div>
 )}
