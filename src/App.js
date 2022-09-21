@@ -8,7 +8,8 @@ import Home from './components/main/Home/Home'
 // import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 // import Cart from './components/Cart/Cart'
 // import Checkout from './components/Checkout/Checkout'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+// import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom'
 import { CartContextProvider } from './context/CartContext';
 
 

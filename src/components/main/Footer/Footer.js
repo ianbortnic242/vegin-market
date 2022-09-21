@@ -23,7 +23,7 @@ const Footer = () => {
     
     return (
     <footer className="resize_social_media">
-        <div><Link to='/'><img src={menu_icon}/></Link></div>
+        <div><Link to='/'><img alt='' src={menu_icon}/></Link></div>
     </footer>
     )
 }

@@ -1,5 +1,5 @@
 import './Home.css'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import {useState, useEffect} from "react"
 import {getDocs, collection, query, where } from "firebase/firestore";
 import {db} from '../../../services/firebase/index'
@@ -49,7 +49,7 @@ const Home = () => {
 
     return (
         <div className='container_box'>
-            <div><img className="box" src = {home_img}/></div>
+            <div><img alt='' className="box" src = {home_img}/></div>
             <div className='box stack-top main_div'>
                 <p>Escoge un tema para comenzar!</p>
 
@@ -62,7 +62,7 @@ const Home = () => {
                                     {section['categories'].map((category) => (
                                         <div className="col-4 row d-flex justify-content-around">
                                             <div className="card card-block index_topics_size topics no_padding">
-                                                <div><img className="fill_div transition" src={category.img}/></div>
+                                                <div><img alt='' className="fill_div transition" src={category.img}/></div>
                                             </div>
                                             <div><h1 className="centered_down category_title">{category.name}</h1></div>
                                         </div>
