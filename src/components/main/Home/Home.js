@@ -47,8 +47,6 @@ const Home = () => {
             })
     },[])
 
-
-
     return (
         <div className='container_box'>
             <div><img alt='' className="box" src = {home_img}/></div>
