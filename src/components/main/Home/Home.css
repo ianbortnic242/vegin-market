@@ -20,7 +20,7 @@
 .stack-top{
     z-index: 1;
     margin-top: 300px;
-  }
+}
 
 p {
     position: relative;
@@ -39,65 +39,10 @@ p {
 
 
 
-.index_topics_size{
-    width: 100%;
-    padding-bottom: 50%;
-  }
-  
-.topics{
-    position: relative;
-    height: 0;
-    box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid white;
-}
-  
-  
-  .centered_down {
-    font-size: 20px;
-    text-align: center;
-  }
-
-
-  .transition:hover{
-    transform: scale(1.1);
-    transition: all 1s;
-  }
-  
-  .fill_div{
-    width: 100%;
-  }
-
-  .section h2{
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    font-size: 40px;
-  
-}
-
 .card-block {
     height: 200px;
 }
 
-.category_title {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 20px;
-    color: #393939;
-}
-  
-.no_padding {
-    padding: 0 !important;
-}
-
-/* .margin_section {
-    margin-bottom: 80px;
-} */
 
 .spacing_footer{
     height: 120px;
