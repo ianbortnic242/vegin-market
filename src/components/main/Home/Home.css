@@ -17,12 +17,12 @@
     left: 0;
 }
 
-.stack-top{
+.stack-top {
     z-index: 1;
     margin-top: 300px;
 }
 
-p {
+.comenzar {
     position: relative;
     font-family: 'Poppins';
     font-style: normal;
@@ -35,12 +35,6 @@ p {
     text-underline-offset: 10px;
     text-decoration-thickness: 1px;
 
-}
-
-
-
-.card-block {
-    height: 200px;
 }
 
 

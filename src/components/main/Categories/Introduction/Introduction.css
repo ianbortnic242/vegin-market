@@ -1,0 +1,27 @@
+.ianbo{
+    height: 250px;
+    background-color: #2D9E8A;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ianbo p{
+    font-family: 'Poppins';
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 50px;
+}
+
+.font_1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.font_2 {
+    font-size: 20px;
+    font-weight: 400;
+}

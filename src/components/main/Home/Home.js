@@ -51,7 +51,7 @@ const Home = () => {
         <div className='container_box'>
             <div><img alt='' className="box" src = {home_img}/></div>
             <div className='box stack-top main_div'>
-                <p>Escoge un tema para comenzar!</p>
+                <p className='comenzar'>Escoge un tema para comenzar!</p>
                 <SectionList sections={sections}/>
                 <div className='spacing_footer'></div>
             </div>
