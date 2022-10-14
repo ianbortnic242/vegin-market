@@ -3,7 +3,6 @@ import Footer from './components/main/Footer/Footer'
 import Home from './components/main/Home/Home'
 import Introduction from './components/main/Categories/Introduction/Introduction'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import { CartContextProvider } from './context/CartContext';
 
 
 function App() {
@@ -11,7 +10,6 @@ function App() {
 
   return (
     <div className="App">
-      <CartContextProvider>
       <header className="App-header">
       <BrowserRouter>
       <Routes>
@@ -21,8 +19,6 @@ function App() {
         <Footer/>
       </BrowserRouter>
       </header>
-      </CartContextProvider>
-
     </div>
   );
 }
