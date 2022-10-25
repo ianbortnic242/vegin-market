@@ -5,7 +5,7 @@ import Introduction from './components/main/Categories/Introduction/Introduction
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
-function App() {
+function App() { 
 
 
   return (
