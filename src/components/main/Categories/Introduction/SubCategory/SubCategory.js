@@ -1,7 +1,7 @@
 import './SubCategory.css'
 import {Link} from 'react-router-dom'
 
-const Section = ({color, name, subcategories}) =>{
+const SubCategory = ({color, name, subcategories}) =>{
 
     return(
         
@@ -12,7 +12,7 @@ const Section = ({color, name, subcategories}) =>{
                         <div className="row d-flex justify-content-around flex-nowrap">
                             {subcategories.map((subcategory) => (
                                 <div className="col-4 row d-flex justify-content-around justify-content-center">
-                                    <Link to={`/subcategory/${subcategory.path_name}`} style={{textDecoration:"none"}}>
+                                    <Link to={`/subcategory/2`} style={{textDecoration:"none"}}>
                                         <div className="card card-block border border-0 index_topics_size topics no_padding">
                                             <div><img alt='' className="fill_div2 transition" src={subcategory.img}/></div>
                                         </div>
@@ -28,6 +28,6 @@ const Section = ({color, name, subcategories}) =>{
     )
 }
 
-export default Section
+export default SubCategory
 
 
