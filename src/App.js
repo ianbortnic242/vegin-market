@@ -4,6 +4,8 @@ import Home from './components/main/Home/Home'
 import Introduction from './components/main/Categories/Introduction/Introduction'
 import Article from './components/main/Categories/Introduction/SubCategory/Article/Article'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
+
 
 
 function App() { 
@@ -12,7 +14,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      
       <BrowserRouter>
+      <ScrollToTop/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/category/Introduccion' element={<Introduction/>}/>
