@@ -1,19 +1,15 @@
 import { useState } from "react";
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import './Article.css'
 
 const Article = () => {
     // We can use the `useParams` hook here to access
     // the dynamic pieces of the URL.
-    let { id } = useParams();
 
     const location = useLocation()
     const {name, img, text, color} = location.state
     console.log(text)
     console.log(location)
-
-
-    const texto = "woubcvwoeuvbwrouubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nbwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nbwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nbwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nb"
 
     const ReadMoreReadLess = (children) => {
 
