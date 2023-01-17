@@ -4,36 +4,52 @@ import {useState, useEffect} from "react"
 import {getDocs, collection} from "firebase/firestore";
 import {db} from '../../../../services/firebase/index'
 
-const Introduction = () =>{
+const Introduction = () => {
 
+    const [subcategoriesdata, setSubCategoriesData] = useState([])
+    const [articles, setArticles] = useState([])
     const [subcategories, setSubCategories] = useState([])
 
-
     useEffect(() => {
-        const collectionRef = collection(db, "articles");
-        getDocs(collectionRef).then((response) => {
-            const lo_basico = []
-            const conceptos = []
-            const autores = []
-            response.docs.forEach((article) => {
-                const data = article.data()
-                if(data.subcategory==='Lo Básico'){
-                    lo_basico.push(data);
-                }
-                if(data.subcategory==='Conceptos'){
-                    conceptos.push(data);
-                }
-                if(data.subcategory==='Autores'){
-                    autores.push(data);
-                }
+        const subcategoriesRef = collection(db, "subcategories");
+        getDocs(subcategoriesRef).then((response) => {
+            const data = []
+            response.docs.forEach((subcategory) => {
+                data.push(subcategory.data())
             })
-            return [lo_basico, conceptos, autores];
-        }).then((subcategories) =>{
-            setSubCategories([{'name':"Lo Básico", 'subcategories': subcategories[0], 'color': '#72D3AD'},{'name':"Conceptos", 'subcategories': subcategories[1], 'color': '#2D9E8A'}, {'name':"Autores", 'subcategories': subcategories[2], 'color': '#A7C698'}])
-        }).catch(err =>{
-                console.log(err)
+            return data
+        }).then((data)=> {
+            setSubCategoriesData(data)
+        }).then(()=>{
+
+            const articlesRef = collection(db, "articles");
+            getDocs(articlesRef).then((response) => {
+                const articles = []
+                response.docs.forEach((article) => {
+                    articles.push(article.data())
+                })
+                return articles
+            }).then((articles)=> {
+                setArticles(articles)
             })
-    },[])
+        }).then(()=>{
+            const subcategories = []
+            subcategoriesdata.forEach((data)=>{
+                const related_articles = []
+                articles.forEach((art)=>{
+                    if(art.subcategory===data.name){
+                        related_articles.push(art)  
+                    }
+                })
+                subcategories.push({'name': data.name, 'subcategories': related_articles, 'color': data.color})
+            })
+            return subcategories
+        }).then((subcategories)=>{
+            setSubCategories(subcategories)
+        }) 
+    
+    },[articles, subcategoriesdata])
+
 
 
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import './Article.css'
 
 const Article = () => {
@@ -7,7 +7,11 @@ const Article = () => {
     // the dynamic pieces of the URL.
     let { id } = useParams();
 
-    const home_img = "https://www.w3schools.com/images/picture.jpg"
+    const location = useLocation()
+    const {name, img, text, color} = location.state
+    console.log(text)
+    console.log(location)
+
 
     const texto = "woubcvwoeuvbwrouubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nbwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nbwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nbwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nwoubcvwoeuvbwrouweofnweoucbwouvcbw /nb"
 
@@ -32,11 +36,11 @@ const Article = () => {
     return (
       
 
-      <div className='container_box'>
-        <div><img alt='' className="box" src = {home_img}/></div>
-        <div className='box_2 stack-top main_div bk_color wow'>
-          <h2>¿Por que veganismo?</h2> <br/>
-          <p>{ReadMoreReadLess(texto)}</p>
+      <div>
+        <div><img alt='' className="box_2" src = {img}/></div>
+        <div style={{'background-color': color}} className='wow'>
+          <h2>{name}</h2> <br/>
+          <p>{ReadMoreReadLess(text)}</p>
 
 
         </div>

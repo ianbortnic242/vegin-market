@@ -4,6 +4,8 @@
 }
 
 .wow {
+    padding-top: 50px;
+    padding-bottom: 100px;
     min-height:200px;
     max-height: 400px;
     overflow: scroll;
@@ -44,3 +46,10 @@
     font-weight: 500;
     color: black;
 }
+
+.p {
+    line-height: 2;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: justify;
+  }
