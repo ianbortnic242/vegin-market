@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {useLocation} from "react-router-dom";
 import './Article.css'
 
@@ -8,26 +8,24 @@ const Article = () => {
 
     const location = useLocation()
     const {name, img, text, color} = location.state
-    console.log(text)
-    console.log(location)
 
-    const ReadMoreReadLess = (children) => {
+    // const ReadMoreReadLess = (children) => {
 
-      const [isReadMoreShown, SetReadMoreSHown] = useState(false)
+    //   const [isReadMoreShown, SetReadMoreSHown] = useState(false)
+      
 
-      const toggleBtn = () => {
-        SetReadMoreSHown(prevState => !prevState)
+    //   const toggleBtn = () => {
+    //     SetReadMoreSHown(prevState => !prevState)
 
-      }
+    //   }
 
-      return (
-        <p>
-          {isReadMoreShown ? children : children.substring(0, 200)}<br/>
-          {children.length>200 ? <button className="btn_read_more_read_less" onClick={toggleBtn}>{isReadMoreShown? 'Leer Menos': 'Leer Mas...'}</button> : null}
-        </p>
-      )
-    }
-
+    //   return (
+    //     <p>
+    //       {isReadMoreShown ? children : children.substring(0, 200)}<br/>
+    //       {children.length>200 ? <button className="btn_read_more_read_less" onClick={toggleBtn}>{isReadMoreShown? 'Leer Menos': 'Leer Mas...'}</button> : null}
+    //     </p>
+    //   )
+    // }
   
     return (
       
@@ -36,8 +34,8 @@ const Article = () => {
         <div><img alt='' className="box_2" src = {img}/></div>
         <div style={{'background-color': color}} className='wow'>
           <h2>{name}</h2> <br/>
-          <p>{ReadMoreReadLess(text)}</p>
-
+          {/* <div>{ReadMoreReadLess(texto)}</div> */}
+          <div className="texto" dangerouslySetInnerHTML={{ __html: text}}/>
 
         </div>
         
