@@ -34,7 +34,7 @@ const Article = () => {
         <div><img alt='' className="box_2" src = {img}/></div>
         <div style={{'background-color': color}} className='wow'>
           <h2 className="ianboo">{name}</h2> <br/>
-          {/* <div>{ReadMoreReadLess(texto)}</div> */}
+          {/* <div>{ReadMoreReadLess(texto )}</div> */}
           <div className="texto" dangerouslySetInnerHTML={{ __html: text}}/>
 
         </div>
