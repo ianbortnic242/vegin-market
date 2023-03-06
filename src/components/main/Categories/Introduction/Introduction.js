@@ -37,15 +37,25 @@ const Introduction = () => {
             subcategoriesdata.forEach((data)=>{
                 const related_articles = []
                 articles.forEach((art)=>{
-                    if(art.subcategory===data.name){
+                    if(art.subcategory_id===data.id){
                         related_articles.push(art)  
                     }
                 })
-                subcategories.push({'name': data.name, 'subcategories': related_articles, 'color': data.color})
+                subcategories.push({'id': data.id, 'name': data.name, 'subcategories': related_articles, 'color': data.color})
             })
             return subcategories
         }).then((subcategories)=>{
-            setSubCategories(subcategories)
+            const items = subcategories.map(
+                (element) => { return [element, element['id']] });
+              
+            items.sort(
+            (first, second) => { return first[1] - second[1] }
+            );
+            
+            const sorted_subcategories = items.map(
+                (e) => { return e[0] });
+
+            setSubCategories(sorted_subcategories)
         }) 
     
     },[articles, subcategoriesdata])

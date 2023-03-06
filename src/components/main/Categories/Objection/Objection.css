@@ -1,0 +1,30 @@
+.obj{
+    background-color: #FF968F;
+    height: 1000px;
+}
+
+
+.obj p{
+    font-family: 'Poppins';
+    font-style: normal;
+    color: #FFFFFF;
+    margin: auto;
+    width: 60%;
+    text-align: justify;
+
+}
+
+.font_1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.font_2 {
+    font-size: 20px;
+    font-weight: 400;
+}
