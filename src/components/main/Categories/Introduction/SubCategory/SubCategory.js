@@ -8,7 +8,7 @@ const SubCategory = ({name, subcategories, color}) =>{
             <section className="section2">
                 <h2 style={{'color': color}}>{name}</h2>
                 <div>
-                    <div className="container-fluid overflow-scroll">
+                    <div className="container-fluid overflow-auto">
                         <div className="row d-flex justify-content-around flex-nowrap">
                             {subcategories.map((article) => (
                                 <div className="col-4 row d-flex justify-content-around justify-content-center">
