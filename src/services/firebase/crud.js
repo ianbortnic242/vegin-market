@@ -2,6 +2,13 @@ import {getDocs, collection, query, where } from "firebase/firestore";
 import {db} from './index'
 
 
+const getData = async (collection_name) => {
+    const col = await collection(db, collection_name)
+    const collectionData = await getDocs(col)
+    return collectionData
+}
+
+
 const getImage = async (img_name) =>{
     const home_doc = query(collection(db, 'images'), where('name', '==', img_name))
     const imgDoc = await getDocs(home_doc)
@@ -11,17 +18,10 @@ const getImage = async (img_name) =>{
     return image[0].img
 }
 
-const getSections = async () => {
-    const sectionsCollection = collection(db, "sections")
-    const sections = await getDocs(sectionsCollection)
-    return sections
-}
 
 const getCategories = async () => {
-    const sections = await getSections()
-
-    const collectionRef = collection(db, "categories_vegin");
-    const categories = await getDocs(collectionRef)
+    const sections = await getData("sections")
+    const categories = await getData("categories_vegin")
 
     const sections_with_categories = []
 
@@ -42,9 +42,44 @@ const getCategories = async () => {
             }
         )
     })
-    console.log(sections_with_categories)
 
     return sections_with_categories
 }
 
-export {getImage, getCategories}
+
+
+const getArticles = async () => {
+
+    const subcategories = await getData("subcategories")
+    const articles = await getData("articles")
+
+    const subcategories_with_articles = []
+
+    subcategories.forEach((subcategory)=>{
+        const subcategory_data = subcategory.data()
+        const related_articles = []
+        articles.forEach((art)=>{
+            const art_data = art.data()
+            if(art_data.subcategory_id===subcategory_data.id){
+                related_articles.push(art_data)  
+            }
+        })
+        subcategories_with_articles.push({'id': subcategory_data.id, 'name': subcategory_data.name, 'related_articles': related_articles, 'color': subcategory_data.color})
+    })
+    const items = subcategories_with_articles.map(
+        (element) => { return [element, element['id']] });
+      
+    items.sort(
+    (first, second) => { return first[1] - second[1] }
+    );
+    
+    const sorted_subcategories = items.map(
+        (e) => { return e[0] });
+
+    console.log(sorted_subcategories)
+    return sorted_subcategories
+
+}
+
+
+export {getImage, getCategories, getArticles}
