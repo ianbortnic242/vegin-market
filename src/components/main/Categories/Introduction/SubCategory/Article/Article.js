@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import {useLocation} from "react-router-dom";
+import ReactMarkdown from "react-markdown"
 import './Article.css'
 
 const Article = () => {
@@ -8,24 +9,6 @@ const Article = () => {
 
     const location = useLocation()
     const {name, img, text, color} = location.state
-
-    // const ReadMoreReadLess = (children) => {
-
-    //   const [isReadMoreShown, SetReadMoreSHown] = useState(false)
-      
-
-    //   const toggleBtn = () => {
-    //     SetReadMoreSHown(prevState => !prevState)
-
-    //   }
-
-    //   return (
-    //     <p>
-    //       {isReadMoreShown ? children : children.substring(0, 200)}<br/>
-    //       {children.length>200 ? <button className="btn_read_more_read_less" onClick={toggleBtn}>{isReadMoreShown? 'Leer Menos': 'Leer Mas...'}</button> : null}
-    //     </p>
-    //   )
-    // }
   
     return (
       
@@ -34,8 +17,8 @@ const Article = () => {
         <div><img alt='' className="box_2" src = {img}/></div>
         <div style={{'background-color': color}} className='wow'>
           <h2 className="ianboo">{name}</h2> <br/>
-          {/* <div>{ReadMoreReadLess(texto )}</div> */}
-          <div className="texto" dangerouslySetInnerHTML={{ __html: text}}/>
+          <div className="texto"><ReactMarkdown children={text}/></div>
+          
 
         </div>
         

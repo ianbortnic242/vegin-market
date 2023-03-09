@@ -3,8 +3,9 @@ import SectionList from '../SectionList/SectionList'
 
 // import {Link} from 'react-router-dom'
 import {useState, useEffect} from "react"
-import {getDocs, collection, query, where } from "firebase/firestore";
+import {getDocs, collection} from "firebase/firestore";
 import {db} from '../../../services/firebase/index'
+import {getImage, getCategories} from '../../../services/firebase/crud'
 
 
 const Home = () => {
@@ -15,37 +16,16 @@ const Home = () => {
 
 
     useEffect(()=>{
-
-        const home_doc = query(collection(db, 'images'), where('name', '==', 'home_background'))
-        getDocs(home_doc).then(response => {
-            const home_doc = response.docs.map(doc => {
-                return {id: doc.id, ...doc.data()}
-            })
-            setHomeImg(home_doc[0].img)
-        })}
+        const fetchData = async () => {
+            const img = await getImage('home_background')
+            setHomeImg(img)
+            const categories = await getCategories()
+            setSections(categories)
+        }
+        fetchData()
+        }
     ,[])
 
-    useEffect(() => {
-        const collectionRef = collection(db, "categories_vegin");
-        getDocs(collectionRef).then((response) => {
-            const aprender_categories = []
-            const actuar_categories = []
-            response.docs.forEach((category) => {
-                const data = category.data()
-                if(data.section==='Aprender'){
-                    aprender_categories.push(data);
-                }
-                if(data.section==='Actuar'){
-                    actuar_categories.push(data);
-                }
-            })
-            return [aprender_categories, actuar_categories];
-        }).then((categories) =>{
-            setSections([{'name':"Aprender", 'categories': categories[0], 'color': '#72D3AD'},{'name':"Actuar", 'categories': categories[1], 'color': '#2D9E8A'}])
-        }).catch(err =>{
-                console.log(err)
-            })
-    },[])
 
     return (
         <div className='container_box'>
