@@ -1,0 +1,17 @@
+.texto {
+    line-height: 2;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    text-align: justify;
+    color: black;
+  }
+
+h2 {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.colorsin {
+    color: #FF968F;
+}

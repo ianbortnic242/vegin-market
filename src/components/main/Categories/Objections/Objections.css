@@ -1,6 +1,5 @@
 .obj{
     background-color: #FF968F;
-    height: 1000px;
 }
 
 
@@ -35,12 +34,13 @@
     margin: auto;
     width: 30%;
     justify-content: center;
-  }
+    margin-bottom: 50px;
+}
 
 .inline button{
     font-weight: 500;
     color: white;
-    font-size: 15px;
+    font-size: 22px;
     background-color: transparent;
     border: none;
 }
@@ -62,3 +62,23 @@
     width: 400px;
 }
 
+li {
+    margin-bottom: 50px;
+    list-style-type: none;
+}
+
+.list_style {
+    border-radius: 20px;
+    margin: auto;
+    width: 40%;
+    height: 500px;
+    overflow: scroll;
+    font-size: 20px;
+    background-color: white;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.list_style li{
+    color: #FF968F;
+}

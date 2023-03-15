@@ -1,4 +1,4 @@
-import Section from '../Section/Section'
+import Section from './Section/Section'
 
 const SectionList = ({sections}) =>{
     return(

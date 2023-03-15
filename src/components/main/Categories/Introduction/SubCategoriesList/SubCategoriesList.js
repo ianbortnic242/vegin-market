@@ -1,4 +1,4 @@
-import SubCategory from '../SubCategory/SubCategory'
+import SubCategory from './SubCategory/SubCategory'
 
 const SubCategoriesList = ({subcategories}) =>{
 

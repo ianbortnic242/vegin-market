@@ -1,11 +1,8 @@
 import './Home.css'
-import SectionList from '../SectionList/SectionList'
-
-// import {Link} from 'react-router-dom'
+import SectionList from './SectionList/SectionList'
 import {useState, useEffect} from "react"
-import {getDocs, collection} from "firebase/firestore";
-import {db} from '../../../services/firebase/index'
 import {getImage, getCategories} from '../../../services/firebase/crud'
+
 
 
 const Home = () => {

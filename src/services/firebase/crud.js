@@ -82,4 +82,13 @@ const getArticles = async () => {
 }
 
 
-export {getImage, getCategories, getArticles}
+const getObjections = async () => {
+    const objectionsData = await getData("objeciones")
+    const objections = objectionsData.docs.map(doc => {
+        return doc.data()
+    })
+    return objections
+}
+
+
+export {getImage, getCategories, getArticles, getObjections}
