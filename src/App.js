@@ -1,6 +1,5 @@
 import './App.css';
 import Header from './components/main/Header/Header'
-// import Footer from './components/main/Footer/Footer'
 import Home from './components/main/Home/Home'
 import Introduction from './components/main/Categories/Introduction/Introduction'
 import Objection from './components/main/Categories/Objections/Objections'
@@ -28,7 +27,6 @@ function App() {
         <Route path='/category/Objeciones' element={<Objection/>}/>
         <Route path='/objeciones/:id' element={<ObjectionArticle/>}/>
       </Routes>
-        {/* <Footer/> */}
       </BrowserRouter>
       </header>
     </div>

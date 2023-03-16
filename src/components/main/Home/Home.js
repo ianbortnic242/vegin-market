@@ -4,11 +4,8 @@ import {useState, useEffect} from "react"
 import {getImage, getCategories} from '../../../services/firebase/crud'
 
 const Home = () => {
-
-
     const [home_img, setHomeImg] = useState([])
     const [sections, setSections] = useState([])
-
 
     useEffect(()=>{
         const fetchData = async () => {
