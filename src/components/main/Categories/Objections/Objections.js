@@ -51,10 +51,14 @@ const Objection = () => {
                             ))}
                         </ul>
                     </div>
-
                 </div>
-
             </div>
+        <div className='centered'>
+            <p>¿Tuviste un debate?</p>
+            <Link to={{pathname: 'hola'}}>
+                <button>¡Cuéntanos!</button>
+            </Link>
+        </div>
         <div className='spacing_footer'></div>
 
         </div>

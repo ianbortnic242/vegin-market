@@ -3,8 +3,6 @@ import SectionList from './SectionList/SectionList'
 import {useState, useEffect} from "react"
 import {getImage, getCategories} from '../../../services/firebase/crud'
 
-
-
 const Home = () => {
 
 

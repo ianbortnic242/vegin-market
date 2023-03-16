@@ -38,11 +38,13 @@
     font-weight: 400;
 }
 
+.hjo{
+    margin: auto;
+    width: 90%;
+}
+
 .texto {
     line-height: 2;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 40px;
     text-align: justify;
   }
 

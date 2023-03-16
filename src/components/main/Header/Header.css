@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    width: 100%;
+    z-index: 2;
+    background-color: #72D3AD;
+    justify-content: left;
+    top: 0;
+    overflow: hidden;
+    height: 50px;
+  }
+
+  .header img {
+    margin-left: 20px;
+    height: 100%;
+  }
+
+  

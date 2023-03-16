@@ -1,5 +1,6 @@
 import './App.css';
-import Footer from './components/main/Footer/Footer'
+import Header from './components/main/Header/Header'
+// import Footer from './components/main/Footer/Footer'
 import Home from './components/main/Home/Home'
 import Introduction from './components/main/Categories/Introduction/Introduction'
 import Objection from './components/main/Categories/Objections/Objections'
@@ -19,6 +20,7 @@ function App() {
       
       <BrowserRouter>
       <ScrollToTop/>
+      <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/category/Introduccion' element={<Introduction/>}/>
@@ -26,7 +28,7 @@ function App() {
         <Route path='/category/Objeciones' element={<Objection/>}/>
         <Route path='/objeciones/:id' element={<ObjectionArticle/>}/>
       </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </BrowserRouter>
       </header>
     </div>

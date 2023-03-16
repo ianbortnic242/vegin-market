@@ -15,15 +15,12 @@ const ObjectionArticle = () => {
     return (
       
 
-      <div>
-        <div><img alt='' className="box_2" src = {img}/></div>
+      <div className="bckground">
+        <div><img alt='' className="box_2 " src = {img}/></div>
         <div className='wow'>
-          <h2 className="colorsin">{name}</h2> <br/>
+          <h2>{name}</h2><br/>
           <div className="texto"><ReactMarkdown children={text}/></div>
-          
-
         </div>
-        
       </div>
     );
   }
