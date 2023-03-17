@@ -6,12 +6,15 @@ const Header = () => {
 
     
     return (
-    <div className="header">
-            <Link to={{pathname: '/'}}>
-                <img src='./img/logo.png' alt='logo vegin'></img>
-            </Link>
+    <div className='header'>
+            <div className="barra">
+        <Link to={{pathname: '/'}}>
+            <img src='./img/logo.png' alt='logo vegin'></img>
+        </Link>
+    </div>
         <NavbarBasic/>
     </div>
+
     )
 }
 

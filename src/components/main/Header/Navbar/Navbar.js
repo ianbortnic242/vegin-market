@@ -1,14 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import './Navbar.css'
 
 const NavbarBasic = () => {
-  return (
-    <Navbar fill variant="tabs" bg="light" expand="lg">
-      <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  return (  
+    <Navbar className="custom-nav maxbox" bg='light' expand="lg">
+      <Container className='maxbox'>
+        <Navbar.Toggle className="yanbo" aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className='griega'>
             <Nav.Link  href="/">Home</Nav.Link>
             <Nav.Link href="/category/Introduccion">Introducción</Nav.Link>
             <Nav.Link href="/category/Objeciones">Objeciones</Nav.Link>

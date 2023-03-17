@@ -1,19 +1,26 @@
-.header {
-    display: flex;
-    justify-content: space-around;
-    position: sticky;
-    width: 100%;
-    z-index: 2;
-    background-color: #72D3AD;
-    justify-content: left;
-    top: 0;
-    overflow: hidden;
-    height: 50px;
-  }
+.barra {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  background-color: #72D3AD;
+  height: 50px;
+  
+}
 
-  .header img {
-    margin-left: 20px;
-    height: 100%;
-  }
+.barra img {
+  margin-left: 20px;
+  height: 100%;
+}
+
+
+.header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+}
+
+  
+
+
 
   

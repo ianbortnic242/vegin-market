@@ -1,0 +1,24 @@
+.custom-nav {
+    height: 30px;
+    font-size: 18px;
+}
+
+
+.navbar-light .navbar-toggler-icon {
+     height: 20px !important;
+}
+
+.yanbo {
+    height: 30px !important;
+}
+
+.maxbox{
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-content: center !important;
+}
+
+.griega{
+    justify-content: space-between !important;
+    width: 90%;
+}
