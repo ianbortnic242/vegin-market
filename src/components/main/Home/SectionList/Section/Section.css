@@ -38,7 +38,7 @@
 
 .centered_down {
     font-size: 20px;
-    text-align: center;
+    margin: auto;
 }
 
 
@@ -50,4 +50,10 @@
     text-align: center;
     margin-top: 20px;
     color: #393939;
+}
+
+.joven{
+    display: flex;
+    justify-items: center;
+    text-align: left;
 }

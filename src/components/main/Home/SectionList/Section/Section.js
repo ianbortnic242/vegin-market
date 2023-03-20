@@ -13,10 +13,12 @@ const Section = ({color, name, categories}) =>{
                             {categories.map((category) => (
                                 <div className="col-4 row d-flex justify-content-around">
                                     <Link to={`/category/${category.path_name}`} style={{"pointer-events": category.disabled ? "none": "active", textDecoration:"none"}}>
-                                        <div className="card card-block index_topics_size topics no_padding">
-                                            <div><img alt='' style={{filter: category.disabled ? "blur(10px)": "blur(0px)"}} className="fill_div transition" src={category.img}/></div>
-                                        </div>
-                                        <div><h1 style={{filter: category.disabled ? "blur(1px)": "blur(0px)"}} className="centered_down category_title">{category.name}</h1></div>
+                                            <div className="card card-block index_topics_size topics no_padding joven">
+                                                <div><img alt='' style={{filter: category.disabled ? "blur(10px)": "blur(0px)"}} className="fill_div transition" src={category.img}/></div>
+                                            </div>
+                                            <h1 style={{filter: category.disabled ? "blur(1px)": "blur(0px)"}} className="centered_down category_title">{category.name}</h1>
+                                            
+
                                     </Link>
                                 </div>
                             ))}
